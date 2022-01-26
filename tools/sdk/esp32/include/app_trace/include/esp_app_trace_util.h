@@ -68,7 +68,7 @@ typedef struct {
  */
 static inline void esp_apptrace_lock_init(esp_apptrace_lock_t *lock)
 {
-    portMUX_INITIALIZE(&lock->mux);
+    vPortCPUInitializeMutex(&lock->mux);
     lock->int_state = 0;
 }
 
