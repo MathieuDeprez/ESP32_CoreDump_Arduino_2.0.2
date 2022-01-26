@@ -1,0 +1,172 @@
+{
+  "name": "espressif32",
+  "title": "Espressif 32",
+  "description": "Espressif Systems is a privately held fabless semiconductor company. They provide wireless communications and Wi-Fi chips which are widely used in mobile devices and the Internet of Things applications.",
+  "homepage": "https://espressif.com/",
+  "license": "Apache-2.0",
+  "keywords": [
+    "dev-platform",
+    "Wi-Fi",
+    "Bluetooth",
+    "Xtensa",
+    "LX6"
+  ],
+  "engines": {
+    "platformio": "^5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/platformio/platform-espressif32.git"
+  },
+  "version": "3.3.1",
+  "frameworks": {
+    "arduino": {
+      "package": "framework-arduinoespressif32",
+      "script": "builder/frameworks/arduino.py"
+    },
+    "espidf": {
+      "package": "framework-espidf",
+      "script": "builder/frameworks/espidf.py",
+      "description": "ESP-IDF is the official development framework for the ESP32 and ESP32-S Series SoCs.",
+      "homepage": "https://docs.espressif.com/projects/esp-idf/en/latest/esp32/",
+      "title": "Espressif IoT Development Framework"
+    },
+    "simba": {
+      "package": "framework-simba",
+      "script": "builder/frameworks/simba.py",
+      "description": "Simba is an RTOS and build framework with aims to make embedded programming easy and portable",
+      "homepage": "http://simba-os.readthedocs.org",
+      "title": "Simba"
+    },
+    "pumbaa": {
+      "package": "framework-pumbaa",
+      "script": "builder/frameworks/pumbaa.py",
+      "description": "Pumbaa is Python on top of Simba. The implementation is a port of MicroPython, designed for embedded devices with limited amount of RAM and code memory",
+      "homepage": "http://pumbaa.readthedocs.org/",
+      "title": "Pumbaa"
+    }
+  },
+  "packages": {
+    "toolchain-xtensa-esp32": {
+      "type": "toolchain",
+      "owner": "espressif",
+      "version": "8.4.0+2021r1"
+    },
+    "toolchain-xtensa-esp32s2": {
+      "type": "toolchain",
+      "optional": true,
+      "owner": "espressif",
+      "version": "8.4.0+2021r1"
+    },
+    "toolchain-riscv32-esp": {
+      "type": "toolchain",
+      "optional": true,
+      "owner": "espressif",
+      "version": "8.4.0+2021r1"
+    },
+    "toolchain-xtensa32": {
+      "type": "toolchain",
+      "optional": true,
+      "owner": "platformio",
+      "version": "~2.80400.0",
+      "optionalVersions": ["~2.50200.0"]
+    },
+    "toolchain-xtensa32s2": {
+      "type": "toolchain",
+      "optional": true,
+      "owner": "platformio",
+      "version": "~1.80400.0"
+    },
+    "toolchain-esp32ulp": {
+      "type": "toolchain",
+      "optional": true,
+      "owner": "platformio",
+      "version": "~1.22851.0"
+    },
+    "toolchain-esp32s2ulp": {
+      "type": "toolchain",
+      "optional": true,
+      "owner": "platformio",
+      "version": "~1.22851.0"
+    },
+    "toolchain-riscv-esp": {
+      "type": "toolchain",
+      "optional": true,
+      "owner": "platformio",
+      "version": "~1.80400.0"
+    },
+    "framework-arduinoespressif32": {
+      "type": "framework",
+      "optional": true,
+      "owner": "platformio",
+      "version": "https://github.com/MathieuDeprez/ESP32_CoreDump_Arduino_2.0.2.git#framework"
+    },
+    "framework-arduino-mbcwb": {
+      "type": "framework",
+      "optional": true,
+      "owner": "meteca",
+      "version": ">=2.1.1"
+    },
+    "framework-espidf": {
+      "type": "framework",
+      "optional": true,
+      "owner": "platformio",
+      "version": "~3.40300.0",
+      "optionalVersions": ["~3.40001.0"]
+    },
+    "framework-simba": {
+      "type": "framework",
+      "optional": true,
+      "owner": "platformio",
+      "version": ">=12.2.0"
+    },
+    "framework-pumbaa": {
+      "type": "framework",
+      "optional": true,
+      "owner": "platformio",
+      "version": ">=2.3.0"
+    },
+    "tool-esptoolpy": {
+      "type": "uploader",
+      "owner": "platformio",
+      "version": "~1.30100.0"
+    },
+    "tool-mbctool": {
+      "optional": true,
+      "owner": "meteca",
+      "version": ">=2.0.0"
+    },
+    "tool-openocd-esp32": {
+      "type": "debugger",
+      "optional": true,
+      "owner": "platformio",
+      "version": "~2.1000.0"
+    },
+    "tool-mkspiffs": {
+      "type": "uploader",
+      "optional": true,
+      "owner": "platformio",
+      "version": "~2.230.0"
+    },
+    "tool-cmake": {
+      "optional": true,
+      "owner": "platformio",
+      "version": "~3.16.0"
+    },
+    "tool-ninja": {
+      "optional": true,
+      "owner": "platformio",
+      "version": "^1.7.0"
+    },
+    "tool-mconf": {
+      "optional": true,
+      "owner": "platformio",
+      "version": "~1.4060000.0"
+    },
+    "tool-idf": {
+      "optional": true,
+      "owner": "platformio",
+      "version": "~1.0.1"
+    }
+  }
+}
